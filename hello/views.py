@@ -18,7 +18,7 @@ def statecapital(request):
         return HttpResponse(json.dumps(output), content_type='application/json')
     except:
         output = {"status": "error", "state": "not found".lower(), "capital": "not found".upper()}
-        return HttpResponse(json.dumps(output))
+        return HttpResponse(json.dumps(output), content_type='application/json')
 
 
 def login(request):
