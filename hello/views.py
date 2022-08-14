@@ -1,5 +1,7 @@
+import json
+
 import requests
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 from .models import Greeting
 from .models import Person
@@ -7,6 +9,18 @@ from .models import Person
 
 # Create your views here.
 # <<<---- Login Page Starts Here ---->>
+def statecapital(request):
+    states = {""}
+    try:
+        state = request.GET["state"]
+        state.lower()
+        output = {"status": "ok", "state": state.lower(), "capital": state.upper()}
+        return HttpResponse(json.dumps(output))
+    except:
+        output = {"status": "error", "state": "not found".lower(), "capital": "not found".upper()}
+        return HttpResponse(json.dumps(output))
+
+
 def login(request):
     title = ""
     session = request.session
@@ -22,7 +36,7 @@ def login(request):
         session["name"] = title
         return redirect("/quiz/")
         # return render(request, "quiz.html", {"title": title, "session": session})
-    return render(request, "login.html", { "session": session})
+    return render(request, "login.html", {"session": session})
 
 
 # <<<---- Login Page Ends Here ---->>

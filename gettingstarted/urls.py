@@ -22,5 +22,6 @@ urlpatterns = [
     path("newbase/", hello.views.newbase),
     path("quiz/", hello.views.quiz),
     path("login/", hello.views.login),
+    path("statecapital/", hello.views.statecapital),
 
 ]
