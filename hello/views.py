@@ -15,7 +15,7 @@ def statecapital(request):
         state = request.GET["state"]
         state.lower()
         output = {"status": "ok", "state": state.lower(), "capital": state.upper()}
-        return HttpResponse(json.dumps(output))
+        return HttpResponse(json.dumps(output), content_type='application/json')
     except:
         output = {"status": "error", "state": "not found".lower(), "capital": "not found".upper()}
         return HttpResponse(json.dumps(output))
