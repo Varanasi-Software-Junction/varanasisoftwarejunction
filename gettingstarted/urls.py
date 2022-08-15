@@ -24,6 +24,8 @@ urlpatterns = [
     path("login/", hello.views.login),
     path("statecapital/", hello.views.statecapital),
     path("birthday/", hello.views.birthday),
-    path("trail/",hello.views.trail),
+
+    path("trail/", hello.views.trail),
+    path("trail/",hello.views.trails),
 
 ]
