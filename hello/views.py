@@ -142,20 +142,20 @@ def personentry(request):
     return render(request, "personenter.html", {"persons": persons})
 
 def birthday(request):
-    name = {"avinash": "28-08-1995", "shyam": "08-07-2000", "rohit": "15-08-2000"}
+    names = {"avinash": "28-08-1995", "shyam": "08-07-2000", "rohit": "15-08-2000"}
     try:
         name = request.GET["name"]
         name.lower()
-        birth = name.get(name)
+        birth = names.get(name)
         if birth is None:
-               output = {"name": "error", "name": "not found".lower(), "birth": "not found".upper()}
+               output = {"status": "error", "name": "not found".lower(), "birth": "not found".upper()}
                return HttpResponse(json.dumps(output), content_type='application/json')
         else:
 
-               output = {"name": "ok", "name": state.lower(), "birth": birth.upper()}
+               output = {"status": "ok", "name": name.lower(), "birth": birth.upper()}
                return HttpResponse(json.dumps(output), content_type='application/json')
     except:
-               output = {"name": "error", "name": "not found".lower(), "birth": "not found".upper()}
+               output = {"status": "error", "name": "not found".lower(), "birth": "not found".upper()}
                return HttpResponse(json.dumps(output), content_type='application/json')
 
 
