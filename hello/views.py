@@ -147,7 +147,7 @@ def birthday(request):
         name = request.GET["name"]
         name.lower()
         birth = name.get(name)
-        if birth is none:
+        if birth is None:
                output = {"name": "error", "name": "not found".lower(), "birth": "not found".upper()}
                return HttpResponse(json.dumps(output), content_type='application/json')
         else:
