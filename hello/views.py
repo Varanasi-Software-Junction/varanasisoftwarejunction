@@ -136,6 +136,7 @@ def personentry(request):
     person.address = "Varanasi"
     person.age = 30
     person.save()
+    #hfhfhgf
 
     persons = Person.objects.all()
 
