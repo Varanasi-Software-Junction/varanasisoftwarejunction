@@ -167,4 +167,4 @@ def birthday(request):
 
 def trail(request):
     name = {"Hello Samrat" :"Helo"}
-    return httpredrsponse(json.dumps(name), application_type='application/json')
+    return httpredrsponse("SHIVAM SINGH SAMRAT")
