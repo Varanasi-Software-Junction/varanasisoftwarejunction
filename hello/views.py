@@ -10,12 +10,18 @@ from .models import Person
 # Create your views here.
 # <<<---- Login Page Starts Here ---->>
 def statecapital(request):
-    states = {""}
+    states = {"up": "Lucknow", "bihar": "Patna"}
     try:
         state = request.GET["state"]
         state.lower()
-        output = {"status": "ok", "state": state.lower(), "capital": state.upper()}
-        return HttpResponse(json.dumps(output), content_type='application/json')
+        capital = states.get(state)
+        if capital is None:
+            output = {"status": "error", "state": "not found".lower(), "capital": "not found".upper()}
+            return HttpResponse(json.dumps(output), content_type='application/json')
+        else:
+
+            output = {"status": "ok", "state": state.lower(), "capital": capital.upper()}
+            return HttpResponse(json.dumps(output), content_type='application/json')
     except:
         output = {"status": "error", "state": "not found".lower(), "capital": "not found".upper()}
         return HttpResponse(json.dumps(output), content_type='application/json')
