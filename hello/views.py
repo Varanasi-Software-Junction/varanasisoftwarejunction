@@ -139,8 +139,7 @@ def personentry(request):
 
     persons = Person.objects.all()
 
-
-return render(request, "personenter.html", {"persons": persons})
+    return render(request, "personenter.html", {"persons": persons})
 
 
 def birthday(request):
@@ -166,6 +165,7 @@ def birthday(request):
                   "birth": "not found".upper()}
         return HttpResponse(json.dumps(output), content_type='application/json')
 
+
 def trail(request):
-    name = {"Hello Samrat" :"Helo"}
-    return httpredrsponse(json.dumps(output), content_type='application/json')
+    output = {"Hello Samrat": "Helo"}
+    return HttpResponse(json.dumps(output), content_type='application/json')
