@@ -168,6 +168,11 @@ def birthday(request):
         return HttpResponse(json.dumps(output), content_type='application/json')
 
 def trail(request):
-    name = {"hello mr avinash": "hello"}
-
-    return HttpResponse("hello mr shivam")
+    a = 0
+    b = 0
+    result = 0
+    if request.POST:
+        a= int(request.post["a"])
+        b= int(request.post["b"])
+        result= a+b
+    return HttpResponse(request,{"a":a, "b":b, "result":result})
