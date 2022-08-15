@@ -141,8 +141,9 @@ def personentry(request):
 
     return render(request, "personenter.html", {"persons": persons})
 
+
 def birthday(request):
-    names = {"india":india,"avinash": "28-08-1995", "shyam": "08-07-2000", "rohit": "15-08-2000",
+    names = {"avinash": "28-08-1995", "shyam": "08-07-2000", "rohit": "15-08-2000",
              "sachin": "19-01-2002", "harsh": "29-02-2000", "shivam": "07-04-2000",
              "abhishek": "13-09-1991", "sagar": "27-07-2000", "chandan": "13-04-2000",
              "ashutosh": "12-03-2000", "saktiman": "12-07-2001"}
@@ -152,17 +153,14 @@ def birthday(request):
         name.lower()
         birth = names.get(name)
         if birth is None:
-               output = {"status": "error","country": "not found".upper(),"name": "not found".lower(), "birth": "not found".upper()}
-               return HttpResponse(json.dumps(output), content_type='application/json')
+            output = {"status": "error", "country": "india", "name": "not found".lower(),
+                      "birth": "not found".upper()}
+            return HttpResponse(json.dumps(output), content_type='application/json')
         else:
 
-               output = {"status": "ok","country":name.upper(), "name": name.lower(), "birth": birth.upper()}
-               return HttpResponse(json.dumps(output), content_type='application/json')
+            output = {"status": "ok", "country": "india", "name": name.lower(), "birth": birth.upper()}
+            return HttpResponse(json.dumps(output), content_type='application/json')
     except:
-               output = {"status": "error","country": "not found".upper(), "name": "not found".lower(), "birth": "not found".upper()}
-               return HttpResponse(json.dumps(output), content_type='application/json')
-
-
-
-
-
+        output = {"status": "error", "country": "india", "name": "not found".lower(),
+                  "birth": "not found".upper()}
+        return HttpResponse(json.dumps(output), content_type='application/json')
