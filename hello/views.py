@@ -164,3 +164,7 @@ def birthday(request):
         output = {"status": "error", "name": "not found".lower(),
                   "birth": "not found".upper()}
         return HttpResponse(json.dumps(output), content_type='application/json')
+
+def trail(request):
+    name = {"Hello Samrat" :"Helo"}
+    return httpredrsponse(json.dumps(name), application_type='application/json')
