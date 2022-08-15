@@ -142,7 +142,8 @@ def personentry(request):
     return render(request, "personenter.html", {"persons": persons})
 
 def birthday(request):
-    names = {"avinash": "28-08-1995", "shyam": "08-07-2000", "rohit": "15-08-2000"}
+    names = {"avinash": "28-08-1995", "shyam": "08-07-2000", "rohit": "15-08-2000", "sachin": "19-01-2002", "harsh": "29-02-2000",
+                "shivam": "07-04-2000", "abhishek": "13-09-1991", "sagar": "27-07-2000", "chandan": "13-04-2000", "ashutosh": "12-03-2000"}
     try:
         name = request.GET["name"]
         name.lower()
