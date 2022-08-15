@@ -172,7 +172,7 @@ def trail(request):
     b = 0
     result = 0
     if request.POST:
-        a= int(request.post["a"])
-        b= int(request.post["b"])
+        a= int(request.POST["a"])
+        b= int(request.POST["b"])
         result= a+b
     return HttpResponse(json.dumps(result))
