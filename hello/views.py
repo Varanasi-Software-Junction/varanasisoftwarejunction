@@ -175,4 +175,4 @@ def trail(request):
         a= int(request.post["a"])
         b= int(request.post["b"])
         result= a+b
-    return HttpResponse(request,{"a":a, "b":b, "result":result})
+    return HttpResponse(json.dumps(result))
