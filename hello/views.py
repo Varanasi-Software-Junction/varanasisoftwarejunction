@@ -171,9 +171,9 @@ def birthday(request):
 #     output = {"Hello Mr.Samrat", "Helo"}
 #     return HttpResponse(json.dumps(output), content_type='application/json')
 def trail(request):
-    a = 0
-    b = 0
-    result = 0
+    a = 5
+    b = 5
+    result = 10
     if request.GET:
         a= int(request.GET["a"])
         b= int(request.GET["b"])
