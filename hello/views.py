@@ -139,7 +139,8 @@ def personentry(request):
 
     persons = Person.objects.all()
 
-    return render(request, "personenter.html", {"persons": persons})
+
+return render(request, "personenter.html", {"persons": persons})
 
 
 def birthday(request):
@@ -167,4 +168,4 @@ def birthday(request):
 
 def trail(request):
     name = {"Hello Samrat" :"Helo"}
-    return httpredrsponse("SHIVAM SINGH SAMRAT")
+    return httpredrsponse(json.dumps(output), content_type='application/json')
