@@ -173,7 +173,7 @@ def birthday(request):
 def trail(request):
     a = 5
     b = 5
-    result = 10
+    result = 0
     if request.GET:
         a= int(request.GET["a"])
         b= int(request.GET["b"])
