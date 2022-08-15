@@ -153,14 +153,14 @@ def birthday(request):
         name.lower()
         birth = names.get(name)
         if birth is None:
-            output = {"status": "error", "country": "india", "name": "not found".lower(),
+            output = {"status": "error", "name": "not found".lower(),
                       "birth": "not found".upper()}
             return HttpResponse(json.dumps(output), content_type='application/json')
         else:
 
-            output = {"status": "ok", "country": "india", "name": name.lower(), "birth": birth.upper()}
+            output = {"status": "ok", "name": name.lower(), "birth": birth.upper()}
             return HttpResponse(json.dumps(output), content_type='application/json')
     except:
-        output = {"status": "error", "country": "india", "name": "not found".lower(),
+        output = {"status": "error", "name": "not found".lower(),
                   "birth": "not found".upper()}
         return HttpResponse(json.dumps(output), content_type='application/json')
