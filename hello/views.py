@@ -297,7 +297,7 @@ def dsa(request):
         
 
     {
-        "Java": [
+        "Data Structure": [
             {
                 "questionno": 1,
                 "question": " How can we describe an array in the best possible way? ",
