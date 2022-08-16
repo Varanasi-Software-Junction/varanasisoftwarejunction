@@ -288,3 +288,116 @@ def python(request):
     }'''
 
     return HttpResponse(json.dumps(quesions))
+
+
+
+                        # <!--- Java Question Below--->
+def dsa(request):
+    Questions ='''
+        
+
+    {
+        "Java": [
+            {
+                "questionno": 1,
+                "question": " How can we describe an array in the best possible way? ",
+                "a": "The Array shows a hierarchical structure.",
+                "b": " Arrays are immutable.",
+                "c": "Container that stores the elements of similar types",
+                "d": "The Array is not a data structure ",
+                "Correct  Answer": "C"
+            },
+            {
+                "questionno": 2,
+                "question": "Which of the following is the correct way of declaring an array?",
+                "a": "int javatpoint[10];",
+                "b": "int javatpoint;",
+                "c": "javatpoint{20}",
+                "d": "array javatpoint[10];",
+                "correctanswer": "a"
+            },
+            {
+                "questionno": 3,
+                "question": "How can we initialize an array in C language?",
+
+                "a": "int arr[2]=(10, 20);",
+                "b": "int arr(2)={10, 20}",
+                "c": "int arr[2] = {10, 20}",
+                "d": "int arr(2) = (10, 20)",
+                "correctanswer": "c"
+            },
+            {
+                "questionno": 4,
+                "question": "Which one of the following is the size of int arr[9] assuming that int is of 4 bytes?",
+                "a": "9",
+                "b": "36",
+                "c": "35",
+                "d": "None of the above",
+                "correctanswer": "b"
+            },
+            {
+                "questionno": 5,
+                "question": "Which one of the following is the process of inserting an element in the stack?",
+                "a": "Insert",
+                "b": "Add",
+                "c": "Push",
+                "d": "None of the above",
+                "correctanswer": "c"
+            },
+            {
+                "questionno": 6,
+                "question": " What is the outcome of the prefix expression +, -, *, 3, 2, /, 8, 4, 1?",
+                "a": "12",
+                "b": "11",
+                "c": "5",
+                "d": "7",
+                "correctanswer": "c"
+            },
+            {
+                "questionno": 7,
+                "question": " The minimum number of stacks required to implement a stack is __",
+                "a": "12",
+                "b": "11",
+                "c": "5",
+                "d": "7",
+                "correctanswer": "c"
+            },
+            {
+                "questionno": 8,
+                "question": "Which of the following principle does Queue use? ",
+                "a": "LIFO principle",
+                "b": "FIFO principle",
+                "c": "Linear tree",
+                "d": "Ordered array",
+                "correctanswer": "b"
+            },
+            {
+                "questionno": 9,
+                "question": "Which one of the following is not the type of the Queue? ",
+                "a": "Linear Queue",
+                "b": "Circular Queue",
+                "c": "Double ended Queue",
+                "d": "Single ended Queue",
+                "correctanswer": "d"
+            },
+            {
+                "questionno": 10,
+                "question": "The time complexity of enqueue operation in Queue is __",
+                "a": "O(1)",
+                "b": "O(n)",
+                "c": "O(logn)",
+                "d": "O(nLogn)",
+                "correctanswer": "a"
+            },
+
+        ]
+
+    }'''
+    return HttpResponse(json.dumps(Questions))
+
+
+
+
+
+
+

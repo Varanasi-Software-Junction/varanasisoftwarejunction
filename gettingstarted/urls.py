@@ -28,5 +28,6 @@ urlpatterns = [
     path("trail/", hello.views.trail),
     path("add/",hello.views.add),
     path("python/",hello.views.python),
+    path("dsa/",hello.views.dsa),
 
 ]
