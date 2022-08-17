@@ -7,7 +7,7 @@ from .models import Greeting
 from .models import Person
 
 
-# import requests
+# import requests ok
 
 
 # Create your views here.
