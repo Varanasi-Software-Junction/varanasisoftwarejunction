@@ -319,10 +319,8 @@ def python(request):
     # <!--- Java Question Below--->
 
 
-<<<<<<< HEAD
                         # <!--- Data Structure  Question Below--->
-=======
->>>>>>> 1d31b703e1f532a7876b7a5f19fcf0b923e041c1
+
 def dsa(request):
     Questions = '''
 
