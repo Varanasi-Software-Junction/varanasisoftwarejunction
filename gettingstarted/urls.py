@@ -24,5 +24,6 @@ urlpatterns = [
     path("login/", hello.views.login),
     path("statecapital/", hello.views.statecapital),
     path("bookssearch/", hello.views.bookssearch),
+    path("python/", hello.views.python),
     path("dsa/", hello.views.dsa),
     ]
