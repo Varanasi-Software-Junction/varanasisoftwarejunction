@@ -291,7 +291,7 @@ def python(request):
 
 
 
-                        # <!--- Java Question Below--->
+                        # <!--- Data Structure  Question Below--->
 def dsa(request):
     Questions ='''
         
