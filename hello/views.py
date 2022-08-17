@@ -153,19 +153,26 @@ def birthday(request):
         name.lower()
         birth = names.get(name)
         if birth is None:
-            output = {"status": "error", "name": "not found".lower(),
+            output = {"status": "error", "country": "india", "state": "up", "dist": "varanasi",
+                      "name": "not found".lower(),
                       "birth": "not found".upper()}
             return HttpResponse(json.dumps(output), content_type='application/json')
         else:
 
-            output = {"status": "ok", "name": name.lower(), "birth": birth.upper()}
+            output = {"status": "ok", "country": "india", "state": "up", "dist": "varanasi", "name": name.lower(),
+                      "birth": birth.upper()}
             return HttpResponse(json.dumps(output), content_type='application/json')
     except:
-        output = {"status": "error", "name": "not found".lower(),
+        output = {"status": "error", "country": "india", "state": "up", "dist": "varanasi", "name": "not found".lower(),
                   "birth": "not found".upper()}
         return HttpResponse(json.dumps(output), content_type='application/json')
 
-
-def trail(request):
-    output = {"Hello Samrat": "Helo"}
-    return HttpResponse(json.dumps(output), content_type='application/json')
+def trails(request):
+    a = 0
+    b = 0
+    result = 0
+    if request.GET:
+        a= int(request.GET["a"])
+        b= int(request.GET["b"])
+        result= a+b
+    return HttpResponse(json.dumps(result))
