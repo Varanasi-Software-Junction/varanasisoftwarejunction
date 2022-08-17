@@ -23,11 +23,4 @@ urlpatterns = [
     path("quiz/", hello.views.quiz),
     path("login/", hello.views.login),
     path("statecapital/", hello.views.statecapital),
-    path("birthday/", hello.views.birthday),
-
-    path("trail/", hello.views.trail),
-    path("add/",hello.views.add),
-    path("python/",hello.views.python),
-    path("dsa/",hello.views.dsa),
-
-]
+    path("bookssearch/", hello.views.bookssearch),]
