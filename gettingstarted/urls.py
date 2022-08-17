@@ -24,6 +24,14 @@ urlpatterns = [
     path("login/", hello.views.login),
     path("statecapital/", hello.views.statecapital),
     path("birthday/", hello.views.birthday),
+<<<<<<< HEAD
     path("trails/",hello.views.trails),
+=======
+
+    path("trail/", hello.views.trail),
+    path("add/",hello.views.add),
+    path("python/",hello.views.python),
+    path("dsa/",hello.views.dsa),
+>>>>>>> e325004fce1de6edeb4f8ed4bbe2782932c49c8f
 
 ]
