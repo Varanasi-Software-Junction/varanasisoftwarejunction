@@ -7,10 +7,30 @@ from .models import Greeting
 from .models import Person
 
 
+# import requests
+
+
 # Create your views here.
 # <<<---- Login Page Starts Here ---->>
 def bookssearch(request):
-    return render(request, "bookslist.html")
+    searchValue = ""
+    b={}
+    if request.GET:
+        searchValue = request.GET["searchValue"]
+
+        path = "https://www.googleapis.com/books/v1/volumes?q={0}".format(searchValue)
+        # print(path)
+        url = requests.get(path)
+        # print(response.json())
+        books = json.loads(url.text)
+        print(len(books), type(books))
+        for book in books:
+            print(book)
+        # b = json.dumps(books)
+        b = books["items"]
+        print(b)
+    return render(request, "bookslist.html", {"books": b,"searchValue":searchValue})
+    #return HttpResponse(json.dumps(books), content_type='application/json')
 
 
 def statecapital(request):
