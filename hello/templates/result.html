@@ -8,7 +8,8 @@ Quiz Result
 
 {% block content %}
 <form method="POST">
-<center><h1 style="background-color:lightpink;"> Result </h1></center>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<center><h1 style="background-color:lightpink;"> Result  Declare </h1></center>
 <div>
     <div class ="container">
         {% for data in answers %}
@@ -17,6 +18,7 @@ Quiz Result
             <label><h1 style="background-color:lightgreen;">Que No.{{data.qno}}</h1></label>
 <!--            </div>-->
 
+<!--<button type="button" id="btnOUs" class="btn btn-primary" ng-click="levelOU()">Organization Units </button>-->
         </div>
 
         <div class = "row">
