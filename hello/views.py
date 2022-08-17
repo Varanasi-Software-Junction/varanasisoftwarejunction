@@ -9,10 +9,6 @@ from .models import Person
 
 # Create your views here.
 # <<<---- Login Page Starts Here ---->>
-def bookssearch(request):
-    return render(request, "bookslist.html")
-
-
 def statecapital(request):
     states = {"up": "Lucknow", "bihar": "Patna"}
     try:
@@ -66,7 +62,7 @@ def quiz(request):
           "op3": "harsh", "op4": "none", "correct": "a"}
     q5 = {"question": "Django is  a ?", "op1": "Programming Language", "op2": "Framework",
           "op3": "Python Web Framework", "op4": "None", "correct": "c"}
-    questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+    questions = [q1, q2, q3, q4, q5]
     questionno = 0
     givenanswer = ""
     correctanswer = ""
@@ -140,7 +136,7 @@ def personentry(request):
     person.address = "Varanasi"
     person.age = 30
     person.save()
-    #hfhfhgf
+    # hfhfhgf
 
     persons = Person.objects.all()
 
@@ -158,42 +154,37 @@ def birthday(request):
         name.lower()
         birth = names.get(name)
         if birth is None:
-            output = {"status": "error", "country": "india", "state": "up", "dist": "varanasi",
-                      "name": "not found".lower(),
+            output = {"status": "error", "name": "not found".lower(),
                       "birth": "not found".upper()}
             return HttpResponse(json.dumps(output), content_type='application/json')
         else:
 
-            output = {"status": "ok", "country": "india", "state": "up", "dist": "varanasi", "name": name.lower(),
-                      "birth": birth.upper()}
+            output = {"status": "ok", "name": name.lower(), "birth": birth.upper()}
             return HttpResponse(json.dumps(output), content_type='application/json')
     except:
-        output = {"status": "error", "country": "india", "state": "up", "dist": "varanasi", "name": "not found".lower(),
+        output = {"status": "error", "name": "not found".lower(),
                   "birth": "not found".upper()}
         return HttpResponse(json.dumps(output), content_type='application/json')
 
-<<<<<<< HEAD
-def trails(request):
-=======
 
 def trail(request):
     output = {"Hello Mr.Samrat": "Helo"}
     return HttpResponse(json.dumps(output), content_type='application/json')
+
+
 def add(request):
->>>>>>> e325004fce1de6edeb4f8ed4bbe2782932c49c8f
     a = 0
     b = 0
     result = 0
     if request.GET:
-        a= int(request.GET["a"])
-        b= int(request.GET["b"])
-        result= a+b
+        a = int(request.GET["a"])
+        b = int(request.GET["b"])
+        result = a + b
     return HttpResponse(json.dumps(result))
-<<<<<<< HEAD
-=======
+
 
 def python(request):
-    quesions='''
+    quesions = '''
     {
         "Python": [
             {
@@ -301,12 +292,12 @@ def python(request):
 
     return HttpResponse(json.dumps(quesions))
 
+    # <!--- Java Question Below--->
 
 
-                        # <!--- Java Question Below--->
 def dsa(request):
-    Questions ='''
-        
+    Questions = '''
+
 
     {
         "Data Structure": [
@@ -412,5 +403,3 @@ def dsa(request):
 
 
 
-
->>>>>>> e325004fce1de6edeb4f8ed4bbe2782932c49c8f

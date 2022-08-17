@@ -23,6 +23,4 @@ urlpatterns = [
     path("quiz/", hello.views.quiz),
     path("login/", hello.views.login),
     path("statecapital/", hello.views.statecapital),
-    path("bookssearch/", hello.views.bookssearch),
-
-]
+    path("bookssearch/", hello.views.bookssearch),]
