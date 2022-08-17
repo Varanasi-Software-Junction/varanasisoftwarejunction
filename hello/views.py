@@ -9,6 +9,10 @@ from .models import Person
 
 # Create your views here.
 # <<<---- Login Page Starts Here ---->>
+def bookssearch(request):
+    return render(request, "bookslist.html")
+
+
 def statecapital(request):
     states = {""}
     try:
