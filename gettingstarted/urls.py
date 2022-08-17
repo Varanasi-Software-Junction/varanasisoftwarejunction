@@ -25,3 +25,4 @@ urlpatterns = [
     path("statecapital/", hello.views.statecapital),
     path("bookssearch/", hello.views.bookssearch),
     path("dsa/", hello.views.dsa),
+    ]
