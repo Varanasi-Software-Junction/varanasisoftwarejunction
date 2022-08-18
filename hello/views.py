@@ -337,10 +337,8 @@ def python(request):
 
 
 def dsa(request):
-    demand = requests.GET["q"]
+    demand = request.GET["q"]
     dsaquestions = '''
-
-
     {
         "Data Structure": [
             {
