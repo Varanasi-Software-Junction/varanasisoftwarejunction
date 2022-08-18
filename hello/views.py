@@ -327,7 +327,7 @@ def QuizQuestion(request):
     }'''
 
     if demand=="python":
-        return HttpResponse(json.dumps(pythonquestions))
+#return HttpResponse(json.dumps(pythonquestions))
 
     # return HttpResponse(json.dumps(pythonquestions))
 
@@ -337,7 +337,7 @@ def QuizQuestion(request):
 
 
 # def Q(request):
-    demand = request.GET["q"]
+#     demand = request.GET["q"]
     dsaquestions = '''
     {
         "Data Structure": [
@@ -437,6 +437,7 @@ def QuizQuestion(request):
 
     }'''
 
-    if demand=="dsa":
-        return HttpResponse(json.dumps(dsaquestions))
+    if demand=="python":
+        if demand=="dsa":
+        return HttpResponse(json.dumps(pythonquestions))
     return HttpResponse(json.dumps(dsaquestions))
