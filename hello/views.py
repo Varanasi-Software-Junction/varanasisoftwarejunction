@@ -209,10 +209,10 @@ def add(request):
 
 # demand=requests.Get["q"]
 # if demand=="python":
-#     return Python Data
+#     return HttpResponse(json.dumps(questions))
 # if demand=="dsa":
 #     return DSA Data
-# def questionquiz(request):
+# return HttpResponse(json.dumps(questions))
 
 def python(request):
     demand = request.GET["q"]
@@ -331,9 +331,6 @@ def python(request):
 
 
     # <!--- Data Structure  Question Below--->
-# def python(request):
-    # demand = request.GET["q"]
-
 
 
 def dsa(request):
