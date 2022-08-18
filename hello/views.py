@@ -331,10 +331,14 @@ def python(request):
 
 
     # <!--- Data Structure  Question Below--->
+# def python(request):
+    # demand = request.GET["q"]
+
 
 
 def dsa(request):
-    Questions = '''
+    demand = requests.GET["q"]
+    dsaquestions = '''
 
 
     {
@@ -434,4 +438,7 @@ def dsa(request):
         ]
 
     }'''
-    return HttpResponse(json.dumps(Questions))
+
+    if demand=="dsa":
+        return HttpResponse(json.dumps(dsaquestions))
+    return HttpResponse(json.dumps(dsaquestions))
