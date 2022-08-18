@@ -214,7 +214,7 @@ def add(request):
 #     return DSA Data
 # return HttpResponse(json.dumps(questions))
 
-def python(request):
+def Q(request):
     demand = request.GET["q"]
 
     pythonquestions = '''
@@ -333,7 +333,7 @@ def python(request):
     # <!--- Data Structure  Question Below--->
 
 
-def dsa(request):
+def Q(request):
     demand = request.GET["q"]
     dsaquestions = '''
     {
