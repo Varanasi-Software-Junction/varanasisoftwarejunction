@@ -215,7 +215,7 @@ def add(request):
 # def questionquiz(request):
 
 def python(request):
-    demand = requests.Get["q"]
+    demand = requests.GET["q"]
     pythonquestions = '''
     {
         "Python": [
