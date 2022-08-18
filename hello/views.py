@@ -427,4 +427,4 @@ def QuizQuestion(request):
     if demand=="dsa":
 
         return HttpResponse(json.dumps(dsaquestions))
-    return HttpResponse("Not Found")
+    return HttpResponse("Work on Progress")
