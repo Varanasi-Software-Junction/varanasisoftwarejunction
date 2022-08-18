@@ -212,6 +212,7 @@ def add(request):
 #     return Python Data
 # if demand=="dsa":
 #     return DSA Data
+# def questionquiz(request):
 
 def python(request):
     demand = requests.Get["q"]
@@ -322,7 +323,7 @@ def python(request):
     }'''
 
     if demand=="python":
-        return HttpResponse(python(pythonquestions))
+        return HttpResponse(python("pythonquestions"))
 
     return HttpResponse(json.dumps(pythonquestions))
 

@@ -26,4 +26,5 @@ urlpatterns = [
     path("bookssearch/", hello.views.bookssearch),
     path("python/", hello.views.python),
     path("dsa/", hello.views.dsa),
+    # path("questions",hello.vieww.python),
     ]
