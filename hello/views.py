@@ -212,7 +212,7 @@ def add(request):
 #     return Python Data
 # if demand=="dsa":
 #     return DSA Data
-def questionquiz(request):
+# def questionquiz(request):
 
 def python(request):
     demand = requests.GET["q"]
