@@ -14,7 +14,7 @@ from .models import Person
 # <<<---- Login Page Starts Here ---->>
 def bookssearch(request):
     searchValue = ""
-    b={}
+    b = {}
     if request.GET:
         searchValue = request.GET["searchValue"]
 
@@ -29,8 +29,8 @@ def bookssearch(request):
         # b = json.dumps(books)
         b = books["items"]
         print(b)
-    return render(request, "bookslist.html", {"books": b,"searchValue":searchValue})
-    #return HttpResponse(json.dumps(books), content_type='application/json')
+    return render(request, "bookslist.html", {"books": b, "searchValue": searchValue})
+    # return HttpResponse(json.dumps(books), content_type='application/json')
 
 
 def statecapital(request):
@@ -55,6 +55,8 @@ def login(request):
     title = ""
     session = request.session
     try:
+
+
 
         del session["answers"]
     except:
@@ -160,7 +162,6 @@ def personentry(request):
     person.address = "Varanasi"
     person.age = 30
     person.save()
-    # hfhfhgf
 
     persons = Person.objects.all()
 
@@ -206,9 +207,15 @@ def add(request):
         result = a + b
     return HttpResponse(json.dumps(result))
 
+# demand=requests.Get["q"]
+# if demand=="python":
+#     return Python Data
+# if demand=="dsa":
+#     return DSA Data
 
 def python(request):
-    quesions = '''
+    demand = requests.Get["q"]
+    pythonquestions = '''
     {
         "Python": [
             {
@@ -314,12 +321,15 @@ def python(request):
         ]
     }'''
 
-    return HttpResponse(json.dumps(quesions))
+    if demand=="python":
+        return HttpResponse(python(pythonquestions))
 
-    # <!--- Java Question Below--->
+    return HttpResponse(json.dumps(pythonquestions))
 
 
-                        # <!--- Data Structure  Question Below--->
+
+    # <!--- Data Structure  Question Below--->
+
 
 def dsa(request):
     Questions = '''
