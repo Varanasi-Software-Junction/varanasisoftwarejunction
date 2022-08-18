@@ -326,7 +326,7 @@ def QuizQuestion(request):
         ]
     }'''
 
-    if demand=="python":
+    # if demand=="python":
 #return HttpResponse(json.dumps(pythonquestions))
 
     # return HttpResponse(json.dumps(pythonquestions))
