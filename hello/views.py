@@ -326,7 +326,7 @@ def python(request):
     if demand=="python":
         return HttpResponse(json.dumps(pythonquestions))
 
-    return HttpResponse(json.dumps(python))
+    return HttpResponse(json.dumps(pythonquestions))
 
 
 
