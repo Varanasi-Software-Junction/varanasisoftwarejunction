@@ -24,7 +24,7 @@ urlpatterns = [
     path("login/", hello.views.login),
     path("statecapital/", hello.views.statecapital),
     path("bookssearch/", hello.views.bookssearch),
-    path("python/", hello.views.Q),
-    path("dsa/", hello.views.Q),
+    # path("python/", hello.views.Q),
+    path("QuizQuestion/", hello.views.QuizQuestion),
     # path("pythonquestions",hello.vieww.pythonquestions),
     ]

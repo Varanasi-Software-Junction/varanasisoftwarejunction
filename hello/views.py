@@ -214,7 +214,10 @@ def add(request):
 #     return DSA Data
 # return HttpResponse(json.dumps(questions))
 
-def Q(request):
+def QuizQuestion(request):
+    [{
+   "q" : "python",
+   "q" : " dsa"}]
     demand = request.GET["q"]
 
     pythonquestions = '''
@@ -326,14 +329,14 @@ def Q(request):
     if demand=="python":
         return HttpResponse(json.dumps(pythonquestions))
 
-    return HttpResponse(json.dumps(pythonquestions))
+    # return HttpResponse(json.dumps(pythonquestions))
 
 
 
     # <!--- Data Structure  Question Below--->
 
 
-def Q(request):
+# def Q(request):
     demand = request.GET["q"]
     dsaquestions = '''
     {
