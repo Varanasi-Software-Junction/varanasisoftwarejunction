@@ -323,7 +323,7 @@ def python(request):
     }'''
 
     if demand=="python":
-        return HttpResponse(python("pythonquestions"))
+        return HttpResponse(json.dumps("pythonquestions"))
 
     return HttpResponse(json.dumps(pythonquestions))
 
