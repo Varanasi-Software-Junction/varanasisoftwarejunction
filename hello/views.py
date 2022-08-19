@@ -424,7 +424,7 @@ def QuizQuestion(request):
         }'''
 
     if demand=="python":
-        return HttpResponse("pythonquestions",content_type='application/json')
+        return HttpResponse(pythonquestions,content_type='application/json')
     if demand=="dsa":
 
         return HttpResponse(json.dumps(dsaquestions))
