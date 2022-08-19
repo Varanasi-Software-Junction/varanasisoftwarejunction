@@ -417,7 +417,7 @@ def QuizQuestion(request):
                     "c": "O(logn)",
                     "d": "O(nLogn)",
                     "correctanswer": "a"
-                },
+                }
 
             ]
 
