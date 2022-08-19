@@ -74,8 +74,7 @@ def login(request):
 # <<<---- Login Page Ends Here ---->>
 
 def quiz(request):
-    answers =("https://varanasisoftwarejunction.herokuapp.com/QuizQuestion/?q=python")
-    answers = request.session.get("answers")
+    answers = request.session.get("https://varanasisoftwarejunction.herokuapp.com/QuizQuestion/?q=python")
     if answers == None:
         answers = []
         # requests.get("https://varanasisoftwarejunction.herokuapp.com/QuizQuestion/?q=dsa")
