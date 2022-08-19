@@ -77,6 +77,7 @@ def quiz(request):
     answers = request.session.get("answers")
     if answers == None:
         answers = []
+        requests.get("https://varanasisoftwarejunction.herokuapp.com/QuizQuestion/?q=dsa")
 
     # q1 = {"question": "What is C?", "op1": "Language", "op2": "Alphabet", "op3": "Ascii character",
     #       "op4": "All of these", "correct": "a"}
@@ -88,112 +89,6 @@ def quiz(request):
     #       "op3": "harsh", "op4": "none", "correct": "a"}
     # q5 = {"question": "Django is  a ?", "op1": "Programming Language", "op2": "Framework",
     #       "op3": "Python Web Framework", "op4": "None", "correct": "c"}
-    dsaquestions = '''
-    {
-        "Python": [
-            {
-                "questionno": 1,
-                "question": "Who developed Python Programming Language?",
-                "a": "Wick van Rossum",
-                "b": "Rasmus Lerdorf",
-                "c": "Guido van Rossum",
-                "d": "Niene Stom",
-                "correctanswer": "c"
-            },
-            {
-                "questionno": 2,
-                "question": "Which type of Programming does Python support?",
-                "a": "object-oriented programming",
-                "b": "structured programming",
-                "c": "functional programming",
-                "d": "all of the mentioned",
-                "correctanswer": "d"
-            },
-
-            {
-                "questionno": 3,
-                "question": "Is Python case sensitive when dealing with identifiers?",
-                "a": "no",
-                "b": "yes",
-                "c": "machine dependent",
-                "d": "none of the mentioned",
-                "correctanswer": "b"
-            },
-
-            {
-                "questionno": 4,
-                "question": "Which of the following is the correct extension of the Python file?",
-                "a": ".python",
-                "b": ".pi",
-                "c": ".py",
-                "d": ".p",
-                "correctanswer": "c"
-            },
-
-            {
-                "questionno": 5,
-                "question": "Is Python code compiled or interpreted?",
-                "a": "Python code is both compiled and interpreted",
-                "b": "Python code is neither compiled nor interpreted",
-                "c": "Python code is only compiled",
-                "d": "Python code is only interpreted",
-                "correctanswer": "a"
-            },
-
-            {
-                "questionno": 6,
-                "question": "Which of the following is used to define a block of code in Python language?",
-                "a": "Indentation",
-                "b": "Key",
-                "c": "Brackets",
-                "d": "All of the mentioned",
-                "correctanswer": "a"
-            },
-
-            {
-                "questionno": 7,
-                "question": "Which keyword is used for function in Python language?",
-                "a": "Function",
-                "b": "Def",
-                "c": "Fun",
-                "d": "Define",
-                "correctanswer": "b"
-            },
-
-            {
-                "questionno": 8,
-                "question": "Which of the following character is used to give single-line comments in Python?",
-                "a": "//",
-                "b": "#",
-                "c": "!",
-                "d": "/*",
-                "correctanswer": "a"
-            },
-
-            {
-                "questionno": 9,
-                "question": "Which of the following functions can help us to find the version of python that we are currently working on?",
-                "a": "sys.version(1)",
-                "b": "sys.version(0)",
-                "c": "sys.version()",
-                "d": "sys.version",
-                "correctanswer": "a"
-            },
-
-            {
-                "questionno": 10,
-                "question": "Python supports the creation of anonymous functions at runtime, using a construct called __________",
-                "a": "pi",
-                "b": "anonymous",
-                "c": "lambda",
-                "d": "non of the mentioned",
-
-                "correctanswer": "c"
-            }
-
-        ]
-    }
-    '''
     questions = []#[q1, q2, q3, q4, q5]
     questionno = 0
     givenanswer = ""
