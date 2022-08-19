@@ -77,7 +77,7 @@ def quiz(request):
     answers = request.session.get("answers")
     if answers == None:
         answers = []
-        # requests.get("https://varanasisoftwarejunction.herokuapp.com/QuizQuestion/?q=dsa")
+        requests.get("https://varanasisoftwarejunction.herokuapp.com/QuizQuestion/?q=dsa")
 
     q1 = {"question": "What is C?", "op1": "Language", "op2": "Alphabet", "op3": "Ascii character",
           "op4": "All of these", "correct": "a"}
@@ -424,7 +424,7 @@ def QuizQuestion(request):
         }'''
 
     if demand=="python":
-        return HttpResponse(json.dumps(pythonquestions))
+        return HttpResponse("pythonquestions",content_type='application/json')
     if demand=="dsa":
 
         return HttpResponse(json.dumps(dsaquestions))
