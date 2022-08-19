@@ -427,5 +427,5 @@ def QuizQuestion(request):
         return HttpResponse(pythonquestions,content_type='application/json')
     if demand=="dsa":
 
-        return HttpResponse(json.dumps(dsaquestions))
+        return HttpResponse(dsaquestions,content_type='application/json')
     return HttpResponse("Work on Progress")
